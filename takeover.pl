@@ -4,6 +4,7 @@
 # takeover.pl
 
 # Todo:
+# Fix detecting if you have op.
 # Detect max network modes.
 # Kickban comma separated nicks.
 
