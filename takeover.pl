@@ -4,7 +4,6 @@
 # takeover.pl
 
 # Todo:
-# Fix detecting if you have op.
 # Detect max network modes.
 # Kickban comma separated nicks.
 
@@ -17,7 +16,7 @@ sub takeover {
     Irssi::printformat(MSGLEVEL_CLIENTCRAP, "takeover_crap", "Not connected to server."),        return if (!$server or !$server->{connected});
     Irssi::printformat(MSGLEVEL_CLIENTCRAP, "takeover_crap", "No active channel in window."),    return if (!$channel or ($channel->{type} ne "CHANNEL"));
     my $own_prefixes = $channel->{ownnick}{prefixes};
-    #Irssi::printformat(MSGLEVEL_CLIENTCRAP, "takeover_crap", "You are not a channel operator."), return if ($own_prefixes =~ /~|&|@|%/);
+    Irssi::printformat(MSGLEVEL_CLIENTCRAP, "takeover_crap", "You are not a channel operator."), return if ($own_prefixes =~ /~|&|@|%/);
     my ($qops, $aops, $hops, $qcount, $acount, $hcount, $modes);
     my $hostname      = $channel->{ownnick}{host};
     my $nicklist      = $channel->nicks();
