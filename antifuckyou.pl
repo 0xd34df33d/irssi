@@ -1,3 +1,8 @@
+# AntiFuckYou (SAJOIN Auto-Part Script)
+# Developed by acidvegas in Perl
+# http://github.com/acidvegas/irssi
+# antifuckyou.pl
+
 use strict;
 use Irssi;
 
